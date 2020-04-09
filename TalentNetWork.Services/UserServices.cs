@@ -18,9 +18,30 @@ namespace TalentNetWork.Services
         {
             _IUserRepository = IUserRepository;
         }
+
+        public Task<User> Add(User model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<User>> Get(int id)
         {
            return _IUserRepository.Get(id);
+        }
+
+        public Task<List<User>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Update(User model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

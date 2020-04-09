@@ -132,6 +132,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoFacBootStrapper.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,6 +156,10 @@
     <ProjectReference Include="..\TalentNetWork.Entity\TalentNetWork.Entity.csproj">
       <Project>{6aefc791-f120-4eca-a402-b92f092daeed}</Project>
       <Name>TalentNetWork.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalentNetWork.Helper\TalentNetWork.Helper.csproj">
+      <Project>{9BED4049-9A69-43DF-88A8-EC6A526231E5}</Project>
+      <Name>TalentNetWork.Helper</Name>
     </ProjectReference>
     <ProjectReference Include="..\TalentNetWork.IRepository\TalentNetWork.IRepository.csproj">
       <Project>{632a1219-cb15-4158-ae45-47c3613ab309}</Project>

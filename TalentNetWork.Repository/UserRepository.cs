@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +12,10 @@ namespace TalentNetWork.Repository
 {
     using Entity;
     using IRepository;
+
     public class UserRepository : IUserRepository
     {
-        dbhrm db = new dbhrm();
+        private dbhrm db = new dbhrm();
 
         public Task<User> Add(User model)
         {
@@ -34,6 +37,7 @@ namespace TalentNetWork.Repository
         {
             throw new NotImplementedException();
         }
+
 
         public Task<bool> Update(User model)
         {
