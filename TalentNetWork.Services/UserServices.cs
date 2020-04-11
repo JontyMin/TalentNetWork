@@ -39,6 +39,11 @@ namespace TalentNetWork.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> LoginTask(string user, string pwd)
+        {
+            return _IUserRepository.LoginTask(user, pwd);
+        }
+
         public Task<bool> Update(User model)
         {
             throw new NotImplementedException();

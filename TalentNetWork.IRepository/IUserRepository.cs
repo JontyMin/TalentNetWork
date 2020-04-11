@@ -45,5 +45,7 @@ namespace TalentNetWork.IRepository
         /// <param name="id">用户id</param>
         /// <returns></returns>
         Task<bool> Delete(int id);
+
+        Task<bool> LoginTask(string user, string pwd);
     }
 }

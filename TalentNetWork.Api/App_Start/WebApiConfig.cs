@@ -37,6 +37,10 @@ namespace TalentNetWork.Api
             };
             
             config.EnableCors(globalCors);
+
+
+            // 开启全局验证服务
+            config.Filters.Add(new AuthorizeAttribute()); 
         }
     }
 }

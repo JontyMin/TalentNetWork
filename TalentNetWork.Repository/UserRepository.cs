@@ -38,6 +38,10 @@ namespace TalentNetWork.Repository
             throw new NotImplementedException();
         }
 
+        public Task<bool> LoginTask(string user, string pwd)
+        {
+            return db.User.AnyAsync(x => x.LoginName == user && x.Password == pwd);
+        }
 
         public Task<bool> Update(User model)
         {

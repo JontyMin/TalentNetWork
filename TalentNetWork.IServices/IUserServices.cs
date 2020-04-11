@@ -14,5 +14,6 @@ namespace TalentNetWork.IServices
         Task<User> Add(User model);
         Task<bool> Update(User model);
         Task<bool> Delete(int id);
+        Task<bool> LoginTask(string user, string pwd);
     }
 }
