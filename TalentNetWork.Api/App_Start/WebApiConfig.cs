@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace TalentNetWork.Api
 {
@@ -26,6 +28,15 @@ namespace TalentNetWork.Api
                 Newtonsoft.Json.PreserveReferencesHandling.Objects;  //把Json格式化器设置为防止对对象引用
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            //跨域请求配置
+            var globalCors = new EnableCorsAttribute("*", "*", "*")
+            {
+                //跨域cookie的解决与withCredentials结合使用
+                SupportsCredentials = true
+            };
+            
+            config.EnableCors(globalCors);
         }
     }
 }

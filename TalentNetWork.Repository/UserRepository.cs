@@ -29,8 +29,8 @@ namespace TalentNetWork.Repository
 
         public async Task<IEnumerable<User>> Get(int id)
         {
-            var ls = await db.User.Where(c => c.ID == id).ToListAsync();
-            return ls;
+            return await db.User.Where(c => c.ID == id).ToListAsync();
+            
         }
 
         public Task<List<User>> GetAll()
