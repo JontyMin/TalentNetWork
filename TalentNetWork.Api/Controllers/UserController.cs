@@ -22,12 +22,16 @@ namespace TalentNetWork.Api.Controllers
             _userServices = userServices;
         }
 
-        [HttpGet]
-        [Route("GetUser/{id}")]
-        public async Task<IEnumerable<User>> GetUser(int id)
+        /// <summary>
+        /// 根据用户id获取用户
+        /// </summary>
+        /// <param name="id">用户id</param>
+        /// <returns></returns>
+        [HttpGet,Route("GetUser/{id}")]
+        public async Task<IHttpActionResult> GetUser(int id)
         {
             var ls = await _userServices.Get(id);
-            return ls;
+            return Ok(ls);
         }
 
 

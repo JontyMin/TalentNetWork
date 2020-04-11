@@ -19,6 +19,13 @@ namespace TalentNetWork.Api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            
+            //配置返回数据为json
+            var json = config.Formatters.JsonFormatter;
+            json.SerializerSettings.PreserveReferencesHandling =
+                Newtonsoft.Json.PreserveReferencesHandling.Objects;  //把Json格式化器设置为防止对对象引用
+
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }

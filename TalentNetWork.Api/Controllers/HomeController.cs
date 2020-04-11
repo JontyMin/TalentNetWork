@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace TalentNetWork.Api.Controllers
 {
-    using Entity;
     using IServices;
-    using Helper;
 
     [RoutePrefix("api/home")]
     public class HomeController : ApiController
@@ -23,9 +15,9 @@ namespace TalentNetWork.Api.Controllers
             _IJobServices = IJobServices;
         }
 
-        [HttpGet]
-        [Route("GetHotJob/{pageIndex}/{pageSize}")]
-        public async Task<ResponseMessage> GetHotJob(int pageIndex,int pageSize)
+        //[HttpGet]
+        //[Route("GetHotJob/{pageIndex}/{pageSize}")]
+        /*public async Task<ResponseMessage> GetHotJob(int pageIndex,int pageSize)
         {
             ResponseMessage date = new ResponseMessage()
             {
@@ -37,6 +29,6 @@ namespace TalentNetWork.Api.Controllers
                 message = "查询完成"
             };
             return date;
-        }
+        }*/
     }
 }
