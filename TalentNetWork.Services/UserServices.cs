@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace TalentNetWork.Services
 {
     using IServices;
@@ -39,9 +38,15 @@ namespace TalentNetWork.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> LoginTask(string user, string pwd)
+        /// <summary>
+        /// 登录验证
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <param name="PassWord"></param>
+        /// <returns></returns>
+        public Task<User> LoginTask(string Email, string PassWord)
         {
-            return _IUserRepository.LoginTask(user, pwd);
+            return _IUserRepository.LoginTask(Email, PassWord);
         }
 
         public Task<bool> Update(User model)

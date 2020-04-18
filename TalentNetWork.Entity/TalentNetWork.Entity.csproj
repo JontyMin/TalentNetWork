@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6AEFC791-F120-4ECA-A402-B92F092DAEED}</ProjectGuid>
+    <ProjectGuid>{E74B1390-BFFE-445A-8589-7811A950716C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TalentNetWork.Entity</RootNamespace>

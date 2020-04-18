@@ -34,7 +34,7 @@ namespace TalentNetWork.Entity
         [StringLength(20)]
         public string Tel { get; set; }
 
-        [StringLength(11)]
+        [StringLength(20)]
         public string QQ { get; set; }
 
         [StringLength(50)]

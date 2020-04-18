@@ -45,12 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TalentNetWork.Entity\TalentNetWork.Entity.csproj">
-      <Project>{6aefc791-f120-4eca-a402-b92f092daeed}</Project>
-      <Name>TalentNetWork.Entity</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

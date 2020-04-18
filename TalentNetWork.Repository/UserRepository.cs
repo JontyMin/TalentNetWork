@@ -38,9 +38,9 @@ namespace TalentNetWork.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> LoginTask(string user, string pwd)
+        public async Task<User> LoginTask(string Email, string PassWord)
         {
-            return db.User.AnyAsync(x => x.LoginName == user && x.Password == pwd);
+            return await db.User.FirstOrDefaultAsync(x => x.QQ == Email && x.Password == PassWord);
         }
 
         public Task<bool> Update(User model)

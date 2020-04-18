@@ -40,7 +40,7 @@ namespace TalentNetWork.Api
 
 
             // 开启全局验证服务
-            config.Filters.Add(new AuthorizeAttribute()); 
+            //config.Filters.Add(new AuthorizeAttribute()); 
         }
     }
 }
