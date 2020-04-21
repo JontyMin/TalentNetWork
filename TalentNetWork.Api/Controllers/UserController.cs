@@ -8,6 +8,7 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using System.Web.UI;
 using TalentNetWork.Api.Models;
+using TalentNetWork.Entity;
 using TokenTest.Filter;
 
 namespace TalentNetWork.Api.Controllers
@@ -24,7 +25,7 @@ namespace TalentNetWork.Api.Controllers
             _userServices = userServices;
         }
         /// <summary>
-        /// 获取登录token
+        /// 登录
         /// </summary>
         /// <returns></returns>
         [HttpGet, Route("login")]
@@ -48,11 +49,10 @@ namespace TalentNetWork.Api.Controllers
                 return Ok(new ResponseData() { Code =400,Data=null, Message = error });
             }
 
+
             model.PassWord =
                     System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.PassWord, "MD5");
             var user = await _userServices.LoginTask(model.Email, model.PassWord);
-
-
             if (user == null)
                 return Ok(new ResponseData()
                 {

@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace TalentNetWork.Api.Controllers
 {
@@ -15,20 +16,17 @@ namespace TalentNetWork.Api.Controllers
             _IJobServices = IJobServices;
         }
 
-        //[HttpGet]
-        //[Route("GetHotJob/{pageIndex}/{pageSize}")]
-        /*public async Task<ResponseMessage> GetHotJob(int pageIndex,int pageSize)
+        [HttpGet, Route("hotJobs/{pageIndex}")]
+        public IHttpActionResult GetHotJob(int pageIndex)
         {
-            ResponseMessage date = new ResponseMessage()
+            var pageSize = 5;
+            var count = _IJobServices.GetCount();
+            var data = _IJobServices.GetHotJob(pageIndex, pageSize);
+            return Ok(new
             {
-                Code = 200,
-                Data = new
-                {
-                    ls=await _IJobServices.GetHotJob(pageIndex,pageSize)
-                },
-                message = "查询完成"
-            };
-            return date;
-        }*/
+                count = count,
+                data = data
+            });
+        }
     }
 }

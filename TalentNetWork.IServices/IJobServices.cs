@@ -14,8 +14,7 @@ namespace TalentNetWork.IServices
         Task<Job> Add(Job model);
         Task<bool> Update(Job model);
         Task<bool> Delete(int id);
-
-        Task<IEnumerable<V_JobInfo>> GetHotJob(int pageIndex, int pageSize);
-
+        int GetCount();
+        List<V_Job> GetHotJob(int pageIndex, int pageSize);
     }
 }

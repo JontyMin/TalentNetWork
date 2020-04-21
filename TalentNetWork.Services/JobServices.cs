@@ -39,14 +39,17 @@ namespace TalentNetWork.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<V_JobInfo>> GetHotJob(int pageIndex, int pageSize)
-        {
-            return _IJobRepository.GetHotJob(pageIndex, pageSize);
-        }
+        public int GetCount() => _IJobRepository.GetCount();
+
 
         public Task<bool> Update(Job model)
         {
             throw new NotImplementedException();
+        }
+
+        List<V_Job> IJobServices.GetHotJob(int pageIndex, int pageSize)
+        {
+            return _IJobRepository.GetHotJob(pageIndex, pageSize);
         }
     }
 }

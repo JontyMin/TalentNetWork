@@ -161,6 +161,7 @@
     <Compile Include="App_Start\AutoFacBootStrapper.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="CacheHelper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Filter\AddChallengeOnUnauthorizedResult.cs" />
